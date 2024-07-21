@@ -33,6 +33,7 @@ WORKDIR /srv/jekyll
 RUN gem install jekyll bundler==2.5.7
 
 RUN bundle install --no-cache
+RUN bundle install -r bundle_requirements.txt
 # && rm -rf /var/lib/gems/3.1.0/cache
 EXPOSE 8080
 
